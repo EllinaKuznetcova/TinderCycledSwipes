@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let dragManager = DraggableCardsManagerView(frame: self.view.frame)
-        dragManager.prepareView(0)
+        dragManager.prepareView(4)
         self.view.addSubview(dragManager)
     }
 
