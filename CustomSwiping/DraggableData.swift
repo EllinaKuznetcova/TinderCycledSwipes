@@ -8,15 +8,15 @@
 
 import Foundation
 
-protocol DraggableArrayDelegate {
+protocol DraggableDataDelegate: class {
     func initView(index: Int) -> Any
 }
 
-struct DraggableArray<ViewType, DataType> {
-    var cards = LinkedList<ViewType>()
-    var data = LinkedList<DataType>()
+struct DraggableData<ViewType, DataType> {
+    var cards = CycledLinkedList<ViewType>()
+    var data = CycledLinkedList<DataType>()
     
-    var delegate: DraggableArrayDelegate?
+    weak var delegate: DraggableDataDelegate?
     var capacity = 3
     
     var presentedCardDataIndex = 0
@@ -35,10 +35,10 @@ struct DraggableArray<ViewType, DataType> {
     
     init() {}
     
-    init(data: [DataType], cardIndexToPresent: Int, delegate: DraggableArrayDelegate) {
+    init(data: [DataType], cardIndexToPresent: Int, delegate: DraggableDataDelegate) {
         guard data.count > 0 else {self.capacity = 0; return}
         if data.count < self.capacity * 2 + 1 {
-            self.capacity = (data.count - 1)/2
+            self.capacity = (data.count - 1)
         }
         self.delegate = delegate
         self.data.append(data)

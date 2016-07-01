@@ -1,5 +1,5 @@
 //
-//  LinkedList.swift
+//  CycledLinkedList.swift
 //  CustomSwiping
 //
 //  Created by Эллина Кузнецова on 30.06.16.
@@ -18,7 +18,7 @@ public class LinkedListNode<T>: AnyObject {
     }
 }
 
-public class LinkedList<T> {
+public class CycledLinkedList<T> {
     public typealias Node = LinkedListNode<T>
     
     private var head: Node?
@@ -148,7 +148,7 @@ public class LinkedList<T> {
     }
 }
 
-extension LinkedList: CustomStringConvertible {
+extension CycledLinkedList: CustomStringConvertible {
     public var description: String {
         var s = "["
         var node = head

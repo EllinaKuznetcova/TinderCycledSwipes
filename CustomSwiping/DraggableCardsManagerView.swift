@@ -15,8 +15,8 @@ class DraggableCardsManagerView: UIView {
     var loadedCards: [DraggableView] = []
     var cardSize: Int = 0
     
-    var cards: DraggableArray<DraggableView, Int>?
-    var data = [0]
+    var cards: DraggableData<DraggableView, Int>?
+    var data = [0,1,2,3,4,5,6,7,8,9]
     
     var cardFrame: CGRect {
         let width: CGFloat = 150
@@ -41,13 +41,13 @@ class DraggableCardsManagerView: UIView {
     
     private func loadCards(index: Int) {
         guard index < self.data.count else {return}
-        self.cards = DraggableArray(data: self.data, cardIndexToPresent: index, delegate: self)
+        self.cards = DraggableData(data: self.data, cardIndexToPresent: index, delegate: self)
         guard let presentedCard = self.cards?.presentedCard else {return}
         self.addSubview(presentedCard)
     }
 }
 
-extension DraggableCardsManagerView: DraggableArrayDelegate {
+extension DraggableCardsManagerView: DraggableDataDelegate {
     func initView(index: Int) -> Any {
         let view = DraggableView(frame: self.cardFrame)
         view.prepareView(index)

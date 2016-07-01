@@ -14,8 +14,8 @@
 		DC6DC6EF1D24196400839748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6DC6ED1D24196400839748 /* LaunchScreen.storyboard */; };
 		DC6DC6F71D24197A00839748 /* DraggableCardsManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DC6F61D24197A00839748 /* DraggableCardsManagerView.swift */; };
 		DC6DC6F91D2419AA00839748 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DC6F81D2419AA00839748 /* DraggableView.swift */; };
-		DC6DC6FB1D25614B00839748 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DC6FA1D25614B00839748 /* LinkedList.swift */; };
-		DC8439AF1D26A2E5009C7596 /* DraggableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8439AE1D26A2E5009C7596 /* DraggableArray.swift */; };
+		DC6DC6FB1D25614B00839748 /* CycledLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DC6FA1D25614B00839748 /* CycledLinkedList.swift */; };
+		DC8439AF1D26A2E5009C7596 /* DraggableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8439AE1D26A2E5009C7596 /* DraggableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		DC6DC6F01D24196400839748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6DC6F61D24197A00839748 /* DraggableCardsManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCardsManagerView.swift; sourceTree = "<group>"; };
 		DC6DC6F81D2419AA00839748 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
-		DC6DC6FA1D25614B00839748 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		DC8439AE1D26A2E5009C7596 /* DraggableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableArray.swift; sourceTree = "<group>"; };
+		DC6DC6FA1D25614B00839748 /* CycledLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycledLinkedList.swift; sourceTree = "<group>"; };
+		DC8439AE1D26A2E5009C7596 /* DraggableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +69,9 @@
 				DC6DC6ED1D24196400839748 /* LaunchScreen.storyboard */,
 				DC6DC6F01D24196400839748 /* Info.plist */,
 				DC6DC6F61D24197A00839748 /* DraggableCardsManagerView.swift */,
-				DC8439AE1D26A2E5009C7596 /* DraggableArray.swift */,
+				DC8439AE1D26A2E5009C7596 /* DraggableData.swift */,
 				DC6DC6F81D2419AA00839748 /* DraggableView.swift */,
-				DC6DC6FA1D25614B00839748 /* LinkedList.swift */,
+				DC6DC6FA1D25614B00839748 /* CycledLinkedList.swift */,
 			);
 			path = CustomSwiping;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 			files = (
 				DC6DC6E71D24196400839748 /* ViewController.swift in Sources */,
 				DC6DC6F71D24197A00839748 /* DraggableCardsManagerView.swift in Sources */,
-				DC6DC6FB1D25614B00839748 /* LinkedList.swift in Sources */,
-				DC8439AF1D26A2E5009C7596 /* DraggableArray.swift in Sources */,
+				DC6DC6FB1D25614B00839748 /* CycledLinkedList.swift in Sources */,
+				DC8439AF1D26A2E5009C7596 /* DraggableData.swift in Sources */,
 				DC6DC6F91D2419AA00839748 /* DraggableView.swift in Sources */,
 				DC6DC6E51D24196400839748 /* AppDelegate.swift in Sources */,
 			);
