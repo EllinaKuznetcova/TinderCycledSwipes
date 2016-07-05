@@ -38,16 +38,28 @@ struct DraggableData<ViewType, DataType> {
     init(data: [DataType], cardIndexToPresent: Int, delegate: DraggableDataDelegate) {
         guard data.count > 0 else {self.capacity = 0; return}
         if data.count < self.capacity * 2 + 1 {
-            self.capacity = (data.count - 1)
+            self.capacity = data.count/2
         }
         self.delegate = delegate
         self.data.append(data)
         self.presentedCardDataIndex = cardIndexToPresent
         let startIndex = self.getStartIndex(from: cardIndexToPresent)
         let lastIndex = self.getLastIndex(from: cardIndexToPresent)
-        for i in startIndex..<lastIndex+1 {
-            guard let view = self.delegate?.initView(i) as? ViewType else {return}
-            self.cards.append(view)
+        if startIndex < lastIndex {
+            for i in startIndex..<lastIndex+1 {
+                guard let view = self.delegate?.initView(i) as? ViewType else {return}
+                self.cards.append(view)
+            }
+        }
+        else {
+            for i in startIndex..<data.count {
+                guard let view = self.delegate?.initView(i) as? ViewType else {return}
+                self.cards.append(view)
+            }
+            for i in 0..<lastIndex+1 {
+                guard let view = self.delegate?.initView(i) as? ViewType else {return}
+                self.cards.append(view)
+            }
         }
     }
     
