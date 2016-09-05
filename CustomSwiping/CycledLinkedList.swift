@@ -1,5 +1,5 @@
 //
-//  CycledLinkedList.swift
+//  LinkedList.swift
 //  CustomSwiping
 //
 //  Created by Эллина Кузнецова on 30.06.16.
@@ -113,7 +113,8 @@ public class CycledLinkedList<T> {
     }
     
     public func removeAll() {
-        head = nil
+        self.head?.next = nil
+        self.count = 0
     }
     
     public func removeNode(node: Node) -> T {
@@ -146,6 +147,10 @@ public class CycledLinkedList<T> {
         }
         return removeNode(node!)
     }
+    
+    deinit {
+        self.removeAll()
+    }
 }
 
 extension CycledLinkedList: CustomStringConvertible {
@@ -154,8 +159,9 @@ extension CycledLinkedList: CustomStringConvertible {
         var node = head
         
         for i in 0..<self.count {
-            s += "\(node!.value)"
-            node = node!.next
+            guard let lNode = node else {node = node?.next; continue}
+            s += "\(lNode.value)"
+            node = lNode.next
             if i < self.count - 1 { s += ", " }
         }
         return s + "]"
